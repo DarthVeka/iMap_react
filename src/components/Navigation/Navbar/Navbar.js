@@ -2,14 +2,16 @@ import React from 'react';
 
 import Logo from '../../Logo/Logo';
 import NavigationItems from '../NavigationItems/NavigationItems';
-import './Navbar.css';
+import classes from './Navbar.css';
 
 const navbar = () => {
     return (
-        <header className='Navbar'>
-            <Logo />
-            <nav>
-                <NavigationItems className='Navbar-DesktopOnly'/>
+        <header className={classes.Navbar}>
+            <div className={classes.Logo}>
+                <Logo />
+            </div>
+            <nav className={classes.DesktopOnly}>
+                <NavigationItems />
             </nav>
         </header>
     );
