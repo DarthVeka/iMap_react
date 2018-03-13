@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import Map from '../Map/Map';
+import Map from '../../components/Map/Map';
 
 class RegionPicker extends Component {
     render() {

@@ -1,10 +1,12 @@
 import React, { Component, Fragment } from 'react';
 
+import Navbar from '../../components/Navigation/Navbar/Navbar';
+
 class Layout extends Component {
     render() {
         return (
             <Fragment>
-                layout
+                <Navbar />
                 <main className='main-container'>
                     {this.props.children}
                 </main>
