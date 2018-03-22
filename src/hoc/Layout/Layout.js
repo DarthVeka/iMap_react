@@ -1,5 +1,6 @@
 import React, { Component, Fragment } from 'react';
 
+import classes from './Layout.css';
 import Navbar from '../../components/Navigation/Navbar/Navbar';
 import SideDrawer from '../../components/Navigation/SideDrawer/SideDrawer';
 
@@ -33,7 +34,7 @@ class Layout extends Component {
                     toggleDrawer={this.ToggleDrawerHandler}
                     closeDrawer={this.CloseDrawerHandler}
                 />
-                <main className='main-container'>
+                <main className={classes.Main}>
                     {this.props.children}
                 </main>
             </Fragment>
