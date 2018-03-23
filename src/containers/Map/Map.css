@@ -1,0 +1,16 @@
+.Map {
+    padding: 7px;
+    border: 1px solid;
+    width: 95%;
+    height: auto;
+}
+
+.Region:hover {
+    fill: #005088
+}
+
+@media (min-width: 500px) {
+    .Map {
+        width: 50%;
+    }
+}

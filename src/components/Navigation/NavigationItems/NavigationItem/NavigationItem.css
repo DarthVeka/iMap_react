@@ -3,6 +3,7 @@
     box-sizing: border-box;
     display: block;
     width: 100%;
+    font-size: 17px;
 }
 
 .NavigationItem a {
@@ -31,7 +32,7 @@
     .NavigationItem a {
         color: white;
         height: 100%;
-        padding: 18px 10px;
+        padding: 15px 10px;
         border-bottom: 4px solid transparent;
     }
     
@@ -39,7 +40,7 @@
     .NavigationItem a:active,
     .NavigationItem a.active {
         background-color: #1e75b4;
-        border-bottom: 2px solid #15BE71;
+        border-bottom: 5px solid #15BE71;
         color: white;
     }
 }

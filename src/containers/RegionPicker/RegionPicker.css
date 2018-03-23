@@ -1,0 +1,11 @@
+.RegionPicker {
+    width: 100%;
+    margin: auto;
+    padding-top: 27px;
+}
+
+@media (min-width: 500px) {
+    .RegionPicker {
+        width: 90%;
+    }
+}
