@@ -5,6 +5,10 @@
     height: auto;
 }
 
+.Region {
+    fill: palevioletred;
+}
+
 .Region:hover {
     fill: #005088
 }

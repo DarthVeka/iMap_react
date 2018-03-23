@@ -35,6 +35,11 @@ class Map extends Component {
         console.log(e.target)
     }
 
+    handleMouseEnter = (e) => {
+        const el = e.target
+        console.log(el.getAttribute('title'))
+    }
+
     render() {
         let displayMap = <Spinner />;
 
@@ -51,10 +56,11 @@ class Map extends Component {
                                 <path
                                     key={mda.id}
                                     id={mda.id}
-                                    region-title={mda.regionTitle}
+                                    title={mda.regionTitle}
                                     d={mda.d}
                                     className={classes.Region}
                                     onClick={this.handleClickOnRegion}
+                                    onMouseEnter={this.handleMouseEnter}
                                 />
                             ))
                         }
