@@ -14,6 +14,19 @@ export const cleareSelectedRegion = () => {
     }
 }
 
+export const mapHover = (region) => {
+    return {
+        type: actionTypes.MAP_HOVER,
+        region
+    }
+}
+
+export const mapHoverLeave = () => {
+    return {
+        type: actionTypes.MAP_HOVER_LEAVE
+    }
+}
+
 export const setMapData = (mapData) => {
     return {
         type: actionTypes.SET_MAP_DATA,

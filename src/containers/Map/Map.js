@@ -16,8 +16,8 @@ class Map extends Component {
     }
 
     handleMouseEnter = (e) => {
-        const el = e.target
-        console.log(el.getAttribute('title'))
+        const el = e.target;
+        this.props.onRegionHover(el.getAttribute('title'));
     }
 
     render() {
@@ -41,6 +41,7 @@ class Map extends Component {
                                     className={classes.Region}
                                     onClick={this.handleClickOnRegion}
                                     onMouseEnter={this.handleMouseEnter}
+                                    onMouseLeave={this.props.onRegionHoverLeave}
                                 />
                             ))
                         }
@@ -66,7 +67,9 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        onMapInit: () => dispatch(actions.mapInit())
+        onMapInit: () => dispatch(actions.mapInit()),
+        onRegionHover: (region) => dispatch(actions.mapHover(region)),
+        onRegionHoverLeave: () => dispatch(actions.mapHoverLeave())
     }
 }
 

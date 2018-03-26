@@ -1,5 +1,7 @@
 export {
     selectRegion,
     cleareSelectedRegion,
-    mapInit
+    mapInit,
+    mapHover,
+    mapHoverLeave
 } from './map';

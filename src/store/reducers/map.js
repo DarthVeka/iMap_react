@@ -2,6 +2,7 @@ import * as actionTypes from '../actions/actionTypes';
 
 const initialState = {
     selectedRegion: null,
+    hoveringOver: null,
     mapData: [],
     error: null,
     loading: false
@@ -41,6 +42,18 @@ const mapReducer = (state = initialState, action) => {
             return {
                 ...state,
                 loading: true
+            }
+
+        case actionTypes.MAP_HOVER:
+            return {
+                ...state,
+                hoveringOver: action.region
+            }
+
+        case actionTypes.MAP_HOVER_LEAVE:
+            return {
+                ...state,
+                hoveringOver: null
             }
 
         default:
