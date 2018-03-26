@@ -1,34 +1,14 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 
-import axios from '../../axios/axios-map';
 import classes from './Map.css';
 import Spinner from '../../components/UI/Spinner/Spinner';
+import * as actions from '../../store/actions';
 
 class Map extends Component {
-    state = {
-        mapData: [],
-        loading: true
-    }
 
     componentDidMount() {
-        axios.get('/region.json')
-            .then(res => {
-                console.log(res.data)
-                const fetchedMapData = [];
-                for (let key in res.data) {
-                    fetchedMapData.push(res.data[key]);
-                }
-                this.setState({
-                    mapData: fetchedMapData,
-                    loading: false
-                });
-            })
-            .catch(err => {
-                console.log(err)
-                this.setState({
-                    loading: false
-                });
-            });
+        this.props.onMapInit();
     }
 
     handleClickOnRegion = (e) => {
@@ -43,16 +23,16 @@ class Map extends Component {
     render() {
         let displayMap = <Spinner />;
 
-        if (!this.state.loading) {
+        if (!this.props.loading) {
             displayMap = (
                 <svg 
                     className={classes.Map} 
-                    viewBox="0 0 620 620"
+                    viewBox="0 0 610 610"
                     version="1.1"
                 >
                     <g>
                         {
-                            this.state.mapData.map(mda => (
+                            this.props.mapData.map(mda => (
                                 <path
                                     key={mda.id}
                                     id={mda.id}
@@ -77,4 +57,17 @@ class Map extends Component {
     }
 }
 
-export default Map;
+const mapStateToProps = (state) => {
+    return {
+        mapData: state.mapData,
+        loading: state.loading
+    }
+}
+
+const mapDispatchToProps = (dispatch) => {
+    return {
+        onMapInit: () => dispatch(actions.mapInit())
+    }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Map);
