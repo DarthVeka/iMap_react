@@ -15,9 +15,8 @@ class MapContainer extends Component {
         console.log(e.target)
     }
 
-    handleMouseEnter = (e) => {
-        const el = e.target;
-        this.props.onRegionHover(el.getAttribute('title'));
+    handleMouseEnter = (title) => {
+        this.props.onRegionHover(title);
     }
 
     render() {
@@ -40,7 +39,7 @@ class MapContainer extends Component {
                                     d={mda.d}
                                     className={classes.Region}
                                     onClick={this.handleClickOnRegion}
-                                    onMouseEnter={this.handleMouseEnter}
+                                    onMouseEnter={() => this.handleMouseEnter(mda.regionTitle)}
                                     onMouseLeave={this.props.onRegionHoverLeave}
                                 />
                             ))
