@@ -1,7 +1,10 @@
 .BasicDetails{
+    width: 95%;
+    margin: auto;
 }
 
 @media (min-width: 500px) {
     .BasicDetails{
+        width: 100%;
     }
 }

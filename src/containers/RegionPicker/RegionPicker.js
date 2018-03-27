@@ -11,7 +11,7 @@ class RegionPicker extends Component {
             <div className={classes.RegionPicker}>
                 <MapContainer  width="620px" height="620px" />
                 <div className={classes.InfoCont}>
-                    <BasicDetails />
+                    <BasicDetails selectedRegion={this.props.selectedRegion} />
                 </div>
             </div>
         );
@@ -20,7 +20,7 @@ class RegionPicker extends Component {
 
 const mapStateToProps = (state) => {
     return {
-        hoveringOver: state.hoveringOver
+        selectedRegion: state.selectedRegion
     }
 }
 

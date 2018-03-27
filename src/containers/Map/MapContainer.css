@@ -6,11 +6,16 @@
 }
 
 .Region {
-    fill: palevioletred;
+    cursor: pointer;
+    fill: #005088;
 }
 
-.Region:hover {
-    fill: #005088
+.Active {
+    fill: #15BE71;
+}
+
+.Region:hover {    
+    fill: #1e75b4;    
 }
 
 @media (min-width: 500px) {

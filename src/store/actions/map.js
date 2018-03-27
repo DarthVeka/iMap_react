@@ -48,18 +48,20 @@ export const fetchMapDataStart = () => {
 }
 
 export const mapInit = () => {
-    return dispatch => {
-        dispatch(fetchMapDataStart());
-        axios.get('/region.json')
-            .then(res => {
-                const fetchedMapData = [];
-                for (let key in res.data) {
-                    fetchedMapData.push(res.data[key]);
-                }
-                dispatch(setMapData(fetchedMapData))
-            })
-            .catch(err => {
-                dispatch(fetchMapDataFailed(err));
-            });
+    return (dispatch, getState )=> {
+        if(getState().mapData.length <= 0) {
+            dispatch(fetchMapDataStart());
+            axios.get('/region.json')
+                .then(res => {
+                    const fetchedMapData = [];
+                    for (let key in res.data) {
+                        fetchedMapData.push(res.data[key]);
+                    }
+                    dispatch(setMapData(fetchedMapData))
+                })
+                .catch(err => {
+                    dispatch(fetchMapDataFailed(err));
+                });
+        }
     }
 }

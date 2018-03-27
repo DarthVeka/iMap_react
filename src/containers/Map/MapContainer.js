@@ -11,8 +11,8 @@ class MapContainer extends Component {
         this.props.onMapInit();
     }
 
-    handleClickOnRegion = (e) => {
-        console.log(e.target)
+    handleClickOnRegion = (region) => {
+        this.props.onSelectRegion(region);
     }
 
     handleMouseEnter = (title) => {
@@ -37,8 +37,8 @@ class MapContainer extends Component {
                                     id={mda.id}
                                     title={mda.regionTitle}
                                     d={mda.d}
-                                    className={classes.Region}
-                                    onClick={this.handleClickOnRegion}
+                                    className={[classes.Region, this.props.selectedRegion === mda ? classes.Active : null].join(' ') }
+                                    onClick={() => this.handleClickOnRegion(mda)}
                                     onMouseEnter={() => this.handleMouseEnter(mda.regionTitle)}
                                     onMouseLeave={this.props.onRegionHoverLeave}
                                 />
@@ -60,7 +60,8 @@ class MapContainer extends Component {
 const mapStateToProps = (state) => {
     return {
         mapData: state.mapData,
-        loading: state.loading
+        loading: state.loading,
+        selectedRegion: state.selectedRegion
     }
 }
 
@@ -68,7 +69,8 @@ const mapDispatchToProps = (dispatch) => {
     return {
         onMapInit: () => dispatch(actions.mapInit()),
         onRegionHover: (region) => dispatch(actions.mapHover(region)),
-        onRegionHoverLeave: () => dispatch(actions.mapHoverLeave())
+        onRegionHoverLeave: () => dispatch(actions.mapHoverLeave()),
+        onSelectRegion: (region) => dispatch(actions.selectRegion(region))
     }
 }
 
