@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
-import classes from './Map.css';
+import classes from './MapContainer.css';
 import Spinner from '../../components/UI/Spinner/Spinner';
 import * as actions from '../../store/actions';
 
-class Map extends Component {
+class MapContainer extends Component {
 
     componentDidMount() {
         this.props.onMapInit();
@@ -73,4 +73,4 @@ const mapDispatchToProps = (dispatch) => {
     }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Map);
+export default connect(mapStateToProps, mapDispatchToProps)(MapContainer);
