@@ -7,15 +7,15 @@
 
 .Region {
     cursor: pointer;
-    fill: #005088;
+    fill: #0064AB;
 }
 
 .Active {
-    fill: #15BE71;
+    fill: #002D4D;
 }
 
 .Region:hover {    
-    fill: #1e75b4;    
+    fill: #018FF4;    
 }
 
 @media (min-width: 500px) {

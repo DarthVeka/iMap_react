@@ -20,7 +20,15 @@ const BasicDetails = (props) => {
         region =
             <Fragment>
                 <h1>{props.selectedRegion.regionTitle}</h1>
-                <img src={images[`MBZ${id}.png`]} alt={props.selectedRegion.regionTitle} />
+                <div className={classes.MainContainer}>
+                    <img className={classes.Image} src={images[`MBZ${id}.png`]} alt={props.selectedRegion.regionTitle} />
+                    <div className={classes.SubContainer}>
+                        <p><strong>Area:</strong> {props.selectedRegion.area.toLocaleString(undefined, { minimumFractionDigits: 2 })} km²</p>
+                        <p><strong>Population:</strong> {props.selectedRegion.population.toLocaleString(undefined, { minimumFractionDigits: 0 })}</p>
+                        <p><strong>Link:</strong> <a href={props.selectedRegion.link}>{props.selectedRegion.regionTitle}</a></p>
+                    </div>
+                </div>
+                <button className={classes.Button}>DETAILS</button>
             </Fragment>
     }
 

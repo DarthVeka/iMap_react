@@ -7,8 +7,26 @@ import * as actions from '../../store/actions';
 
 class MapContainer extends Component {
 
+    
+    componentWillMount() {
+        document.addEventListener("keydown", (e) => this.handleKeyDown(e));
+    }
+    
+    componentWillUnmount() {
+        document.removeEventListener("keydown", (e) => this.handleKeyDown(e));
+    }    
+
     componentDidMount() {
         this.props.onMapInit();
+    }
+
+    handleKeyDown = (e) => {
+        const ESCAPE_KEY = 27;
+
+        if(e.keyCode === ESCAPE_KEY) {
+            this.props.onClearSelectedRegion();
+            console.log('eskejp')
+        }
     }
 
     handleClickOnRegion = (region) => {
@@ -70,7 +88,8 @@ const mapDispatchToProps = (dispatch) => {
         onMapInit: () => dispatch(actions.mapInit()),
         onRegionHover: (region) => dispatch(actions.mapHover(region)),
         onRegionHoverLeave: () => dispatch(actions.mapHoverLeave()),
-        onSelectRegion: (region) => dispatch(actions.selectRegion(region))
+        onSelectRegion: (region) => dispatch(actions.selectRegion(region)),
+        onClearSelectedRegion: () => dispatch(actions.cleareSelectedRegion())
     }
 }
 
