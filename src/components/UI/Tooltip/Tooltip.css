@@ -1,0 +1,29 @@
+.Tooltip {
+    visibility: visible;
+    width: 130px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    font-size: 13px;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 999;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.Show {
+    visibility: visible;
+    opacity: 1;
+}
+
+.DesktopOnly {
+    display: none;
+}
+
+@media (min-width: 500px) {
+    .DesktopOnly {
+        display: block;
+    }
+}

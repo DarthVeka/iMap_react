@@ -14,6 +14,16 @@ export const cleareSelectedRegion = () => {
     }
 }
 
+export const selectRegionStart = (region) => {
+    return (dispatch, getState) => {
+        if(getState().selectedRegion === region) {
+            dispatch(cleareSelectedRegion());
+        } else {
+            dispatch(selectRegion(region));
+        }
+    }
+}
+
 export const mapHover = (region) => {
     return {
         type: actionTypes.MAP_HOVER,
@@ -48,7 +58,7 @@ export const fetchMapDataStart = () => {
 }
 
 export const mapInit = () => {
-    return (dispatch, getState )=> {
+    return (dispatch, getState ) => {
         if(getState().mapData.length <= 0) {
             dispatch(fetchMapDataStart());
             axios.get('/region.json')

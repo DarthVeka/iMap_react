@@ -4,37 +4,28 @@ import { connect } from 'react-redux';
 import classes from './MapContainer.css';
 import Spinner from '../../components/UI/Spinner/Spinner';
 import * as actions from '../../store/actions';
+import Tooltip from '../../components/UI/Tooltip/Tooltip';
 
 class MapContainer extends Component {
 
-    
-    componentWillMount() {
-        document.addEventListener("keydown", (e) => this.handleKeyDown(e));
+    state = {
+        x: null,
+        y: null
     }
-    
-    componentWillUnmount() {
-        document.removeEventListener("keydown", (e) => this.handleKeyDown(e));
-    }    
-
     componentDidMount() {
         this.props.onMapInit();
-    }
-
-    handleKeyDown = (e) => {
-        const ESCAPE_KEY = 27;
-
-        if(e.keyCode === ESCAPE_KEY) {
-            this.props.onClearSelectedRegion();
-            console.log('eskejp')
-        }
     }
 
     handleClickOnRegion = (region) => {
         this.props.onSelectRegion(region);
     }
 
-    handleMouseEnter = (title) => {
+    handleMouseEnter = (title, e) => {
         this.props.onRegionHover(title);
+        this.setState({
+            x: e.pageX+30,
+            y: e.pageY+30
+        })
     }
 
     render() {
@@ -42,8 +33,8 @@ class MapContainer extends Component {
 
         if (!this.props.loading) {
             displayMap = (
-                <svg 
-                    className={classes.Map} 
+                <svg
+                    className={classes.Map}
                     viewBox="0 0 610 610"
                     version="1.1"
                 >
@@ -55,9 +46,9 @@ class MapContainer extends Component {
                                     id={mda.id}
                                     title={mda.regionTitle}
                                     d={mda.d}
-                                    className={[classes.Region, this.props.selectedRegion === mda ? classes.Active : null].join(' ') }
+                                    className={[classes.Region, this.props.selectedRegion === mda ? classes.Active : null].join(' ')}
                                     onClick={() => this.handleClickOnRegion(mda)}
-                                    onMouseEnter={() => this.handleMouseEnter(mda.regionTitle)}
+                                    onMouseEnter={(e) => this.handleMouseEnter(mda.regionTitle, e)}
                                     onMouseLeave={this.props.onRegionHoverLeave}
                                 />
                             ))
@@ -70,6 +61,11 @@ class MapContainer extends Component {
         return (
             <React.Fragment>
                 {displayMap}
+                <Tooltip 
+                    show={this.props.hoveringOver !== null}
+                    top={this.state.y}
+                    left={this.state.x}
+                    >{this.props.hoveringOver}</Tooltip>
             </React.Fragment>
         );
     }
@@ -79,7 +75,8 @@ const mapStateToProps = (state) => {
     return {
         mapData: state.mapData,
         loading: state.loading,
-        selectedRegion: state.selectedRegion
+        selectedRegion: state.selectedRegion,
+        hoveringOver: state.hoveringOver
     }
 }
 
@@ -88,7 +85,7 @@ const mapDispatchToProps = (dispatch) => {
         onMapInit: () => dispatch(actions.mapInit()),
         onRegionHover: (region) => dispatch(actions.mapHover(region)),
         onRegionHoverLeave: () => dispatch(actions.mapHoverLeave()),
-        onSelectRegion: (region) => dispatch(actions.selectRegion(region)),
+        onSelectRegion: (region) => dispatch(actions.selectRegionStart(region)),
         onClearSelectedRegion: () => dispatch(actions.cleareSelectedRegion())
     }
 }

@@ -8,10 +8,12 @@
 .Region {
     cursor: pointer;
     fill: #0064AB;
+    stroke: #67C0FF;
 }
 
 .Active {
-    fill: #002D4D;
+    fill: #003F6C;
+    stroke: #51D88C; 
 }
 
 .Region:hover {    

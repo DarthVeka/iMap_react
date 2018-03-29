@@ -23,6 +23,9 @@
 .SubContainer p {
     margin: 7px;
 }
+p strong {
+    margin-right: 7px;
+}
 
 .SubContainer a:link, .SubContainer a:visited, .SubContainer a:hover, .SubContainer a:active {
     text-decoration: none;
