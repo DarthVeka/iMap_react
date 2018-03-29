@@ -22,9 +22,17 @@ class MapContainer extends Component {
 
     handleMouseEnter = (title, e) => {
         this.props.onRegionHover(title);
+        let X = e.pageX+30;
+        let Y = e.pageY+30;
+
+        if(document.body.clientWidth < 800) {
+            X = 15;
+            Y = 65;
+        }
+
         this.setState({
-            x: e.pageX+30,
-            y: e.pageY+30
+            x: X,
+            y: Y
         })
     }
 

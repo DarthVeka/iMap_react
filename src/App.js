@@ -5,6 +5,7 @@ import './App.css';
 import Layout from './hoc/Layout/Layout';
 import RegionPicker from './containers/RegionPicker/RegionPicker';
 import Comparison from './containers/Comparison/Comparison';
+import Details from './containers/Details/Details';
 
 class App extends Component {
   render() {
@@ -13,6 +14,7 @@ class App extends Component {
         <Layout>
           <Switch>
             <Route path='/comparison' component={Comparison} />
+            <Route path='/details' component={Details} />
             <Route path='/' component={RegionPicker} />
           </Switch>
         </Layout>
