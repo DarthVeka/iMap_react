@@ -1,0 +1,424 @@
+{
+    "mapData": [
+        {
+            "id": "HR-01",
+            "regionTitle": "Zagrebačka županija",
+            "center": {
+                "lat": 45.808479,
+                "lng": 16.039225
+            },
+            "zoom": 9,
+            "pois": [
+                {
+                    "name": "Stari grad Samobor",
+                    "type": "cultural",
+                    "description": "Stari grad Samobor je utvrda u ruševnom stanju na brdu Tepec u Samoboru (Hrvatska).",
+                    "coordinates": {
+                        "lat": 45.798887,
+                        "lng": 15.698098
+                    }
+                }
+            ]
+        },
+        {
+            "id": "HR-02",
+            "regionTitle": "Krapinsko-zagorska županija",
+            "center": {
+                "lat": 46.090841,
+                "lng": 15.943458
+            },
+            "zoom": 9,
+            "pois": [
+                {
+                    "name": "Krapinski pračovjek",
+                    "type": "archeological",
+                    "description": "Zbirku fosilnih ostataka pračovjeka iz špilje na Hušnjakovu brijegu kraj Krapine",
+                    "coordinates": {
+                        "lat": 46.165194,
+                        "lng": 15.862575
+                    }
+                }
+            ]
+        },
+        {
+            "id": "HR-03",
+            "regionTitle": "Sisačko-moslavačka županija",
+            "center": {
+                "lat": 45.396252,
+                "lng": 16.441434
+            },
+            "zoom": 9,
+            "pois": [
+                {
+                    "name": "test",
+                    "type": "test",
+                    "description": "test",
+                    "coordinates": {
+                        "lat": 1,
+                        "lng": 1
+                    }
+                }
+            ]
+        },
+        {
+            "id": "HR-04",
+            "regionTitle": "Karlovačka županija",
+            "center": {
+                "lat": 45.311717,
+                "lng": 15.515903
+            },
+            "zoom": 9,
+            "pois": [
+                {
+                    "name": "test",
+                    "type": "test",
+                    "description": "test",
+                    "coordinates": {
+                        "lat": 1,
+                        "lng": 1
+                    }
+                }
+            ]
+        },
+        {
+            "id": "HR-05",
+            "regionTitle": "Varaždinska županija",
+            "center": {
+                "lat": 46.240755,
+                "lng": 16.321127
+            },
+            "zoom": 9,
+            "pois": [
+                {
+                    "name": "test",
+                    "type": "test",
+                    "description": "test",
+                    "coordinates": {
+                        "lat": 1,
+                        "lng": 1
+                    }
+                }
+            ]
+        },
+        {
+            "id": "HR-06",
+            "regionTitle": "Koprivničko-križevačka županija",
+            "center": {
+                "lat": 46.116221,
+                "lng": 16.825763
+            },
+            "zoom": 9,
+            "pois": [
+                {
+                    "name": "test",
+                    "type": "test",
+                    "description": "test",
+                    "coordinates": {
+                        "lat": 1,
+                        "lng": 1
+                    }
+                }
+            ]
+        },
+        {
+            "id": "HR-07",
+            "regionTitle": "Bjelovarsko-bilogorska županija",
+            "center": {
+                "lat": 45.727307,
+                "lng": 17.004732
+            },
+            "zoom": 9,
+            "pois": [
+                {
+                    "name": "test",
+                    "type": "test",
+                    "description": "test",
+                    "coordinates": {
+                        "lat": 1,
+                        "lng": 1
+                    }
+                }
+            ]
+        },
+        {
+            "id": "HR-08",
+            "regionTitle": "Primorsko-goranska županija",
+            "center": {
+                "lat": 45.230795,
+                "lng": 14.606942
+            },
+            "zoom": 9,
+            "pois": [
+                {
+                    "name": "test",
+                    "type": "test",
+                    "description": "test",
+                    "coordinates": {
+                        "lat": 1,
+                        "lng": 1
+                    }
+                }
+            ]
+        },
+        {
+            "id": "HR-09",
+            "regionTitle": "Ličko-senjska županija",
+            "center": {
+                "lat": 44.626392,
+                "lng": 15.472230
+            },
+            "zoom": 9,
+            "pois": [
+                {
+                    "name": "test",
+                    "type": "test",
+                    "description": "test",
+                    "coordinates": {
+                        "lat": 1,
+                        "lng": 1
+                    }
+                }
+            ]
+        },
+        {
+            "id": "HR-10",
+            "regionTitle": "Virovitičko-podravska županija",
+            "center": {
+                "lat": 45.745070,
+                "lng": 17.628777
+            },
+            "zoom": 9,
+            "pois": [
+                {
+                    "name": "test",
+                    "type": "test",
+                    "description": "test",
+                    "coordinates": {
+                        "lat": 1,
+                        "lng": 1
+                    }
+                }
+            ]
+        },
+        {
+            "id": "HR-11",
+            "regionTitle": "Požeško-slavonska županija",
+            "center": {
+                "lat": 45.432004,
+                "lng": 17.547406
+            },
+            "zoom": 9,
+            "pois": [
+                {
+                    "name": "test",
+                    "type": "test",
+                    "description": "test",
+                    "coordinates": {
+                        "lat": 1,
+                        "lng": 1
+                    }
+                }
+            ]
+        },
+        {
+            "id": "HR-12",
+            "regionTitle": "Brodsko-posavska županija",
+            "center": {
+                "lat": 45.149810,
+                "lng": 17.829615
+            },
+            "zoom": 9,
+            "pois": [
+                {
+                    "name": "test",
+                    "type": "test",
+                    "description": "test",
+                    "coordinates": {
+                        "lat": 1,
+                        "lng": 1
+                    }
+                }
+            ]
+        },
+        {
+            "id": "HR-13",
+            "regionTitle": "Zadarska županija",
+            "center": {
+                "lat": 44.204854,
+                "lng": 15.562521
+            },
+            "zoom": 9,
+            "pois": [
+                {
+                    "name": "test",
+                    "type": "test",
+                    "description": "test",
+                    "coordinates": {
+                        "lat": 1,
+                        "lng": 1
+                    }
+                }
+            ]
+        },
+        {
+            "id": "HR-14",
+            "regionTitle": "Osječko-baranjska županija",
+            "center": {
+                "lat": 45.550197,
+                "lng": 18.487799
+            },
+            "zoom": 9,
+            "pois": [
+                {
+                    "name": "test",
+                    "type": "test",
+                    "description": "test",
+                    "coordinates": {
+                        "lat": 1,
+                        "lng": 1
+                    }
+                }
+            ]
+        },
+        {
+            "id": "HR-15",
+            "regionTitle": "Šibensko-kninska županija",
+            "center": {
+                "lat": 43.869143,
+                "lng": 16.061468
+            },
+            "zoom": 9,
+            "pois": [
+                {
+                    "name": "test",
+                    "type": "test",
+                    "description": "test",
+                    "coordinates": {
+                        "lat": 1,
+                        "lng": 1
+                    }
+                }
+            ]
+        },
+        {
+            "id": "HR-16",
+            "regionTitle": "Vukovarsko-srijemska županija",
+            "center": {
+                "lat": 45.176062,
+                "lng": 18.909624
+            },
+            "zoom": 9,
+            "pois": [
+                {
+                    "name": "test",
+                    "type": "test",
+                    "description": "test",
+                    "coordinates": {
+                        "lat": 1,
+                        "lng": 1
+                    }
+                }
+            ]
+        },
+        {
+            "id": "HR-17",
+            "regionTitle": "Splitsko-dalmatinska županija",
+            "center": {
+                "lat": 43.426352,
+                "lng": 16.667835
+            },
+            "zoom": 9,
+            "pois": [
+                {
+                    "name": "Dioklecijanova palača",
+                    "type": "cultural",
+                    "description": "Dioklecijanova palača je antička palača cara Dioklecijana u Splitu. Oko 300. godine podigao ju je rimski car Dioklecijan i u njoj je boravio nakon povlačenja s prijestolja (305.g) do smrti (316.g).",
+                    "coordinates": {
+                        "lat": 43.508532, 
+                        "lng": 16.440200
+                    }
+                }
+            ]
+        },
+        {
+            "id": "HR-18",
+            "regionTitle": "Istarska županija",
+            "center": {
+                "lat": 45.201167,
+                "lng": 13.915432
+            },
+            "zoom": 9,
+            "pois": [
+                {
+                    "name": "test",
+                    "type": "test",
+                    "description": "test",
+                    "coordinates": {
+                        "lat": 1,
+                        "lng": 1
+                    }
+                }
+            ]
+        },
+        {
+            "id": "HR-19",
+            "regionTitle": "Dubrovačko-neretvanska županija",
+            "center": {
+                "lat": 42.831868,
+                "lng": 17.609466
+            },
+            "zoom": 9,
+            "pois": [
+                {
+                    "name": "test",
+                    "type": "test",
+                    "description": "test",
+                    "coordinates": {
+                        "lat": 1,
+                        "lng": 1
+                    }
+                }
+            ]
+        },
+        {
+            "id": "HR-20",
+            "regionTitle": "Međimurska županija",
+            "center": {
+                "lat": 46.414304,
+                "lng": 16.511833
+            },
+            "zoom": 9,
+            "pois": [
+                {
+                    "name": "test",
+                    "type": "test",
+                    "description": "test",
+                    "coordinates": {
+                        "lat": 1,
+                        "lng": 1
+                    }
+                }
+            ]
+        },
+        {
+            "id": "HR-21",
+            "regionTitle": "Grad Zagreb",
+            "center": {
+                "lat": 45.815579,
+                "lng": 16.003487
+            },
+            "zoom": 9,
+            "pois": [
+                {
+                    "name": "test",
+                    "type": "test",
+                    "description": "test",
+                    "coordinates": {
+                        "lat": 1,
+                        "lng": 1
+                    }
+                }
+            ]
+        }
+    ]
+}

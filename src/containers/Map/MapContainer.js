@@ -39,7 +39,7 @@ class MapContainer extends Component {
     render() {
         let displayMap = <Spinner />;
 
-        if (!this.props.loading) {
+        if (!this.props.loading) {            
             displayMap = (
                 <svg
                     className={classes.Map}
@@ -81,10 +81,10 @@ class MapContainer extends Component {
 
 const mapStateToProps = (state) => {
     return {
-        mapData: state.mapData,
-        loading: state.loading,
-        selectedRegion: state.selectedRegion,
-        hoveringOver: state.hoveringOver
+        mapData: state.map.mapData,
+        loading: state.map.loading,
+        selectedRegion: state.map.selectedRegion,
+        hoveringOver: state.map.hoveringOver
     }
 }
 

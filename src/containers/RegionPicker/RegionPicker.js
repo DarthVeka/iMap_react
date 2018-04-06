@@ -20,7 +20,7 @@ class RegionPicker extends Component {
 
 const mapStateToProps = (state) => {
     return {
-        selectedRegion: state.selectedRegion
+        selectedRegion: state.map.selectedRegion
     }
 }
 

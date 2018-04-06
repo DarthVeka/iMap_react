@@ -6,3 +6,7 @@ export {
     mapHoverLeave,
     selectRegionStart
 } from './map';
+
+export {
+    startFetchingPoiData
+} from './mapData';
