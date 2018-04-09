@@ -1,11 +1,27 @@
 .GoogleMap {
-    width: 380px;
-    height: 380px;
-    border-radius: 190px;
+    width: 320px;
+    height: 320px;
+    border-radius: 160px;
     margin: auto;
 }
 
+@media (min-width: 380px) {
+    .GoogleMap {
+        width: 360px;
+        height: 360px;
+        border-radius: 180px;
+    }
+}
+
 @media (min-width: 400px) {
+    .GoogleMap {
+        width: 380px;
+        height: 380px;
+        border-radius: 190px;
+    }
+}
+
+@media (min-width: 470px) {
     .GoogleMap {
         width: 400px;
         height: 400px;
