@@ -1,7 +1,7 @@
 .Details {
-    width: 90%;
-    margin: auto;
+    width: 100%;
     padding-top: 15px;
+    box-sizing: border-box;
 }
 
 .Heading {
@@ -9,4 +9,11 @@
     vertical-align: middle;
     text-align:center;
     padding-bottom: 15px;
+}
+
+@media (min-width: 500px) {
+    .Details {
+        width: 90%;
+        margin: auto;
+    }
 }
