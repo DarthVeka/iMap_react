@@ -115,7 +115,7 @@ class Auth extends Component {
         if(!this.props.loading) {
             renderForm = (
                 <Fragment>
-                    <form onSubmit={this.submitHandler}>
+                    <form className={classes.Form} onSubmit={this.submitHandler}>
                         {errorMessage}
                         {form}
                         <button className={classes.Button} >SIGN IN</button>
@@ -133,7 +133,7 @@ class Auth extends Component {
         return (
             <div className={classes.Auth}>
                 {authRedirect}
-                <h3>SIGN IN</h3>
+                <h3 className={classes.Heading} >SIGN IN</h3>
                 {renderForm}
             </div>
         );

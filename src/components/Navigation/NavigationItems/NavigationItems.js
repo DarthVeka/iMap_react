@@ -16,7 +16,7 @@ const navigationItems = (props) => {
             <NavigationItem link='/comparison'>Comparison</NavigationItem>
             {
                 props.isAuthenticated ? 
-                    <NavigationItem style={style} link='/logout'>
+                    <NavigationItem link='/logout'>
                         Logout
                     </NavigationItem>
                     :

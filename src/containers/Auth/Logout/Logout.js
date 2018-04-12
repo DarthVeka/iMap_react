@@ -2,12 +2,13 @@ import React, { Component, Fragment } from 'react';
 import { connect } from 'react-redux';
 import { Redirect } from 'react-router-dom';
 
+import * as actions from '../../../store/actions/index';
 import Spinner from '../../../components/UI/Spinner/Spinner';
 
 class Logout extends Component {
 
     componentDidMount() {
-        // Call dispatch function to log off
+        this.props.logout();
     }
     
     render() {
@@ -22,7 +23,7 @@ class Logout extends Component {
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        
+        logout: () => dispatch(actions.logout())
     };
 }
 
