@@ -9,3 +9,8 @@ export const MAP_HOVER_LEAVE = 'MAP_HOVER_LEAVE';
 export const FETCH_MAP_POI_DATA_START = 'FETCH_MAP_POI_DATA_START';
 export const SET_MAP_POI_DATA = 'SET_MAP_POI_DATA';
 export const FETCH_MAP_POI_DATA_FAILED = 'FETCH_MAP_POI_DATA_FAILED';
+
+export const AUTH_START = 'AUTH_START';
+export const AUTH_SUCCESS = 'AUTH_SUCCESS';
+export const AUTH_FAIL = 'AUTH_FAIL';
+export const AUTH_LOGOUT = 'AUTH_LOGOUT';

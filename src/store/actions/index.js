@@ -10,3 +10,8 @@ export {
 export {
     startFetchingPoiData
 } from './mapData';
+
+export {
+    auth,
+    logout
+} from './auth';

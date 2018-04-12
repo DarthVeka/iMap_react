@@ -10,10 +10,12 @@ import App from './App';
 import registerServiceWorker from './registerServiceWorker';
 import mapReducer from './store/reducers/map';
 import mapDataReducer from './store/reducers/poiData';
+import authReducer from './store/reducers/auth';
 
 const rootReducer = combineReducers({
     map: mapReducer,
-    poiData: mapDataReducer
+    poiData: mapDataReducer,
+    auth: authReducer
 })
 
 const composeEnhancers = (process.env.NODE_ENV === 'development' ? window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ : null) || compose;
