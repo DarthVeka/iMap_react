@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 
 import NavigationItem from './NavigationItem/NavigationItem';
 import classes from './NavigationItems.css';
@@ -15,10 +15,15 @@ const navigationItems = (props) => {
             <NavigationItem link='/'>Regions</NavigationItem>
             <NavigationItem link='/comparison'>Comparison</NavigationItem>
             {
-                props.isAuthenticated ? 
-                    <NavigationItem link='/logout'>
-                        Logout
-                    </NavigationItem>
+                props.isAuthenticated ?
+                    <Fragment>
+                        <NavigationItem link='/admin'>
+                            Admin Panel
+                        </NavigationItem>
+                        <NavigationItem link='/logout'>
+                            Logout
+                        </NavigationItem>
+                    </Fragment>
                     :
                     <NavigationItem style={style} link='/auth'>
                         <i className="material-icons">perm_identity</i>
